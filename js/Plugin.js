@@ -86,6 +86,42 @@ $(document).ready(function () {
             'text-align': 'center',
             'color':'#F1E8D1'
         });
+        function updateHeadingStyles() {
+            var $specialHeading = $('.special-heading');
+            var windowWidth = $(window).width();
+            if (windowWidth < 460) {
+                $specialHeading.css({
+                    'font-size': '80px',
+                    'letter-spacing': '-2px'
+                });
+                $('.special-heading+p').css({
+                    'margin': '-35px auto',
+                    'font-size': '25px',
+                });
+            }else if (windowWidth < 800) {
+                $specialHeading.css({
+                    'font-size': '100px',
+                    'letter-spacing': '-2px'
+                });
+                $('.special-heading+p').css({
+                    'margin': '-35px auto',
+                    'font-size': '25px',
+                });
+            } else {
+                $specialHeading.css({
+                    'font-size': '170px',
+                    'letter-spacing': '-3px'
+                });
+                $('.special-heading+p').css({
+                    'margin': '-65px auto',
+                    'font-size': '45px',
+                });
+            }
+        }
+        updateHeadingStyles();
+        $(window).resize(function () {
+            updateHeadingStyles();
+        });
         $('.label').css({ 
             'font-size': '35px',
             'font-weight': '800',
