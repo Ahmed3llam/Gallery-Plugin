@@ -1,0 +1,19 @@
+/* h3::before,h3::after {
+    content: ' ';
+    border-bottom: 1px solid rgb(92, 78, 78);
+    width: 70vw;
+    display: block;
+    margin-bottom: 10px;
+    margin-top: 10px;
+} */
+*{
+    margin: 0;
+    padding: 0;
+}
+html::-webkit-scrollbar{
+    width: 15px;
+    height: .3rem;
+}
+html::-webkit-scrollbar-thumb{
+    background-image: linear-gradient(to bottom,#4A5556 100% ,#b5aeae 0% );
+}
